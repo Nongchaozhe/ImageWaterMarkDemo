@@ -22,6 +22,7 @@
     
     UIImageWriteToSavedPhotosAlbum(waterImage, nil, nil, nil);  //保存图片至相册
     
+//    展示图片
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.view.bounds];
     imageView.image = waterImage;
     [self.view addSubview:imageView];
@@ -47,11 +48,11 @@
 //    [text drawInRect:rect withFont:[UIFont systemFontOfSize:30] lineBreakMode:NSLineBreakByWordWrapping alignment:NSTextAlignmentCenter];
     
 //    从画布中得到image
-    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+    UIImage *returnImage = UIGraphicsGetImageFromCurrentImageContext();
     
     UIGraphicsEndImageContext();
     
-    return img;
+    return returnImage;
 }
 
 
